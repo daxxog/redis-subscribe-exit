@@ -6,7 +6,10 @@ A simple python script and docker container for pushing exit codes via pubsub. U
 ### Testing and Example Usage
 You can run something like this with a redis running on your local machine:
 ```bash
-docker run -e REDIS_URL=redis://host.docker.internal -e REDIS_CHANNEL=test daxxog/redis-subscribe-exit
+docker run \
+    -e REDIS_URL=redis://host.docker.internal \
+    -e REDIS_CHANNEL=test \
+    daxxog/redis-subscribe-exit
 ```
 
 And then in another terminal, push an exit code:
